@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <link rel="stylesheet" href="styles.css">  <!-- CSS link-->
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>coffe shop website</title>
+  
+      <!-- كلمات اذا الاشخاص بحثو فيها يطلع لهم اسم الكافي-->
+ <meta name="keywords"  content="coffe,coffe shope,مقهي">  
+</head>
+<body>
+
+    <!--  website sections*-->
+<nav class="navbar">
+  <a href="#home">Home</a>    <!--link to go to home section-->
+  <a href="#menu">Menu</a>   <!--link to go to menu section-->
+  <a href="#order">order</a>    <!--link to go to order section-->
+  <a href="#about">About</a>    <!--link to go to about section-->
+  <a href="#contact">Contact</a>    <!--link to go to contact section-->
+  </nav>
+
+<main class="content">
+  
+  
+  <section id="home">      <!--home section-->
+    <h1 ><em>Bean House | Coffee Shop</em></h1>   <!-- Coffee shop name --> 
+    <h2 id="welcomeMessage"></h2>    <!-- welcome message upon entering the home section-->
+    <img src ="image/coffeeshop.jpg" width ="60%" height = "600px"> <!-- Coffee shop image -->
+    
+     
+  </section> 
+  
+  <section id="menu">    <!--menu section-->
+    <table>
+      <caption style="margin-left:100px" >Bean House | Coffee Shop</caption> <!-- Table caption -->
+      <tr>                <!-- products table-->
+        <th>المنتج</th>
+        <th>السعر</th>
+        <th>صورة المنتج</th>
+      </tr>   <!-- Each row represents a product in the menu -->
+      <tr><td>سموثي لومي حساوي</td><td>17 SR</td><td><img src ="image/GreenSmoothie.jpg" width="100px"></td></tr>
+      <tr><td>آيسكريم لومي حساوي</td><td>15 SR</td><td><img src ="image/25125.jpg" width="100px"></td></tr>
+      <tr><td>تيراميسو آيسكريم</td><td>16 SR</td><td><img src ="image/TiramisuIceCream.jpg" width="100px"></td></tr>
+      <tr><td>سموثي لومي حساوي (حجم المشاركة)</td><td>17 SR</td><td><img src ="image/BigSmoothie.jpg" width="100px"></td></tr>
+      <tr><td>سموثي شمام</td><td>16 SR</td><td><img src ="image/%D8%B3%D9%85%D9%88%D8%B0%D9%8A%20%D8%B4%D9%85%D8%A7%D9%85.jpg" width="100px"></td></tr>
+      <tr><td>كركديه</td><td>12 SR</td><td><img src ="image/%D9%83%D8%B1%D9%83%D8%AF%D9%8A%D9%87.jpg" width="100px"></td></tr>
+      <tr><td>أمريكانو</td><td>10 SR</td><td><img src ="image/amricano.jpg" width="100px"></td></tr>
+      <tr><td>سبانش لاتيه</td><td>16 SR</td><td><img src ="image/spanishlatte.jpg" width="100px"></td></tr>
+      <tr><td>موكا</td><td>14 SR</td><td><img src ="image/mocha.jpg" width="100px"></td></tr>
+      <tr><td>وايت موكا</td><td>16 SR</td><td><img src ="image/ehitemocha.jpg" width="100px"></td></tr>
+      <tr><td>لاتيه</td><td>14 SR</td><td><img src ="image/latte.jpg" width="100px"></td></tr>
+      <tr><td>كرواسون بيكان</td><td>16 SR</td><td><img src= "image/bican.jpg" width="100px"></td></tr>
+      <tr><td>كرواسون جبن</td><td>14 SR</td><td><img src ="image/cheese.jpg" width="100px"></td></tr>
+      <tr><td>كوكيز فانيلا</td><td>10 SR</td><td><img src ="image/vanilla.jpg" width="100px"></td></tr>
+      <tr><td>بوكس كوكيز حساوي</td><td>64 SR</td><td><img src ="image/%D9%83%D9%88%D9%83%D9%8A%D8%B2%20%D8%AD%D8%B3%D8%A7%D9%88%D9%8A.webp" width="100px"></td></tr>
+      <tr><td>بوكس تيراميسو آيسكريم</td><td>90 SR</td><td><img src ="image/tiramisu.jpg" width="100px"></td></tr>
+      <tr><td>آيسكريم الورد</td><td>16 SR</td><td><img src ="image/rose.jpg" width="100px"></td></tr>
+    </table>
+    
+    <h3><sup> "قد تحتوي بعض الاطعمة مسببات الحساسية"</sup></h3>    <!-- Allergy warning note -->
+
+  </section>
+  
+  <section id="order"> <!-- Order section -->
+
+  <h2 style="color: white">ordering </h2>
+  <form action="payPage.html" method="get" onsubmit="return confirmOrder(event)">    <!-- link to go to pay page-->
+
+            <!-- Order form -->
+    <label for="name">الاسم:</label><br> 
+    <input type="text" id="name" name="name" required><br><br>    <!-- User name input -->
+
+    <label for="phone">رقم الجوال:</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required><br><br> <!-- Phone number input -->
+
+    <label for="product">اختر المنتج:</label><br>      <!--product selection by customer-->
+     <select id="product" name="product" required>
+       
+       <option value="">-- اختر من القائمة --</option>  <!-- Dropdown list of products -->
+      <option>سموثي لومي حساوي</option>
+      <option>آيسكريم لومي حساوي</option>
+      <option>تيراميسو آيسكريم</option>
+      <option>سموثي لومي حساوي (حجم المشاركة)</option>
+      <option>سموثي شمام</option>
+      <option>كركديه</option>
+      <option>أمريكانو</option>
+      <option>سبانش لاتيه</option>
+      <option>موكا</option>
+      <option>وايت موكا</option>
+      <option>لاتيه</option>
+      <option>كرواسون بيكان</option>
+      <option>كرواسون جبن</option>
+      <option>كوكيز فانيلا</option>
+      <option>بوكس كوكيز حساوي</option>
+      <option>بوكس تيراميسو آيسكريم</option>
+      <option>آيسكريم الورد</option>
+    </select><br><br>
+    
+        <!-- Select size using radio buttons -->
+    <label>الحجم:</label><br>
+    <input type="radio" id="small" name="size" value="صغير">
+    <label for="small">صغير</label>
+    <input type="radio" id="medium" name="size" value="وسط">
+    <label for="medium">وسط</label>
+    <input type="radio" id="large" name="size" value="كبير">
+    <label for="large">كبير</label><br><br>
+
+    
+            <!-- Select add-ons using checkboxes -->
+    <label>الإضافات:</label><br>
+    <input type="checkbox" id="extra1" name="extras" value="إسبرسو إضافي">
+    <label for="extra1">إسبريسو إضافي</label><br>
+    <input type="checkbox" id="extra2" name="extras" value="كريمة مخفوقة">
+    <label for="extra2">كريمة مخفوقة</label><br>
+    <input type="checkbox" id="extra3" name="extras" value="سكر قليل">
+    <label for="extra3">سكر قليل</label><br><br>
+
+    <label for="notes">ملاحظات إضافية:</label><br>
+    <textarea id="notes" name="notes" rows="4" cols="50" placeholder="أضف أي ملاحظات هنا..."></textarea><br><br>
+ 
+            <!-- Submit and reset buttons -->
+   <input type="submit" value="إرسال الطلب" >
+  <input type="reset" value="إعادة تعيين">
+   
+  </form>
+</section>
+  
+  
+
+
+     <!-- About section -->
+  <section id="about">
+    <h2 style="color: white"  >Bean House | Coffee Shop</h2>
+    <p>هذا المقهى هو وجهتك المثالية لتستمتع بأجود وأطيب أنواع الحلويات والمشروبات المتميزة والمحبوبة لدى الجميع، استمتع معنا</p>
+    <hr>
+    <h3>:اوقات العمل </h3>
+   <ul style="list-style-position: inside;"> 
+  <li>9:00am - 10:00pm :الاحد -الخميس</li>
+  <li>9:00am - 12:00am :الجمعة-السبت</li>
+</ul>
+    
+  </section>
+
+    <!-- Contact section -->
+  <section id="contact">
+    <h2 style="color: white">تواصل معنا</h2>
+    <p>📍 الموقع: الأحساء - السعودية</p>
+    <p>📞 الهاتف: 0500000000</p>
+  </section>
+  
+
+
+</main>
+  
+</body>
+</html>

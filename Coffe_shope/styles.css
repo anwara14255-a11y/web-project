@@ -1,0 +1,183 @@
+ /* page layout*/
+body {
+      background-image: url("image/background.jpg");  /* Background image for the page */
+      background-size: cover;  /* Make background cover entire screen */
+      background-repeat: no-repeat;  /* Prevent background image repetition */
+      background-attachment: fixed; /* Fix background when scrolling */
+      font-family: Arial, sans-serif;    /* Set font type */
+      margin: 0;
+      padding: 0;
+      color: white;  /* Text color */
+    }
+ /* top navigation bar*/
+    .navbar {
+      overflow: hidden;
+      background-color: #333;  /*navigation bar color*/
+      position: fixed; /* Fix navbar at the top */
+      top: 0;   /* Position at the very top */
+      width: 100%;  /* Full width of the viewport */
+    }
+ /*  link of top navigation bar*/
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;/* Link text color */
+      text-align: center;  /* Center text inside links */
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+      
+
+
+/* Hover effect on navigation links */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Main content container */
+    .content {
+      margin: -10px;
+      text-align: center; /* Center-align text */
+      color: black;  /* Text color */
+      font-size: 20px;
+    }
+
+      /* Specific sections with white text color */
+      #home, #about, #contact #order {
+      color: w;  /* Text color for these sections */
+ 
+    }
+
+     /* Hide all sections by default */
+     section {
+     display: none;
+    }
+
+
+     body:not(:has(:target)) #home,
+     #home:target {
+     display: block;
+    }
+
+     section:target {
+     display: block;
+     }
+
+    /* Styling for tables */
+    table {
+      width: 60%;  /* Table width */
+      border-collapse: collapse; /* Merge borders */
+      margin: 20px auto; /* Center table with vertical margin */
+      direction: rtl; /* Right-to-left text direction */
+      text-align: center;/* Center-align text */
+      background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+      color: black; /* Text color inside table */
+}
+    
+/* Table header and data cells */
+    th, td {
+      border: 1px solid #444; /* Border around cells */
+      padding: 8px;
+    }
+    
+/* Table headers styling */
+    th {
+      background-color: saddlebrown;  /* Header background color */
+      color: #fff; /* Header text color */
+    }
+    
+/* Table caption styling */
+    caption {
+      font-size: 20px;   /* Caption font size */
+      margin-bottom: 10px;  /* Space below caption */
+      font-weight: bold;  /* Bold text */
+
+    }
+    
+/* Styling unordered lists */
+    ul {
+  list-style-type: disc;
+  padding-right: 20px;
+  direction: rtl;
+  font-size: 16px;  /* Font size */
+  line-height: 1.6;
+   }
+    
+    /* Heading 2 styling */
+    h2{ font-size:xx-large; background-color:#584a42}  /* Extra large font size  And  Background color*/
+    /* chang colol text */
+    
+
+   /* Thank page styling*/
+ body {
+      font-family: Arial, sans-serif;  /* Set the base font for the page */
+      text-align: center;  /* Center all content horizontally */
+      margin-top: 100px;/* Add space from the top of the page */
+      background-image:url("image/background.jpg") /* Background image */
+    }
+    h1 { font-family: arial,sans-serif;
+      color:black; /* White heading text */
+      margin-top: 170px;
+      
+        }
+    p{
+      font-size: x-large; /* Large text for the message */
+      color:#643411; /* Dark brown text color */
+      
+    }
+    a:hover{
+      text-decoration: none; /* Remove underline on hover */
+      background-color:white; /* Change background when mouse hovers */
+      font-weight: bold;/* Make the text bold when hovered */
+    }
+
+
+      /* Pay page styling*/
+ .payment-box{
+         text-align: center;
+            
+        }
+        #cod{
+            text-align:right
+        }
+         
+            /* Container box for the payment form */
+        .payment-box{
+		border: 10px inset white; /* Decorative border */
+		background-color:#584a42;  /* Background color of the form */
+		position: absolute;  /* Position it on the page */
+		width: 750px;
+		height: 450px;
+		top:180px; /* Vertical position */
+		left: 500px;  /* Horizontal position */
+        
+    
+ 		}
+#welcomeMessage{
+  color: saddlebrown;
+  text-align: center;
+ background-color: transparent;
+  
+}
+
+body {
+  transition: background 1.5s ease, color 1.5s ease;
+  color: #000; 
+}
+body.morning {
+  background: #dce4ff; 
+  color: #4b3832;
+}
+
+body.afternoon {
+  background: #e7b773; 
+  color: #3e2723;
+}
+
+body.night {
+  background: #2c3e50; 
+  color: #f1f1f1;
+}
+
+

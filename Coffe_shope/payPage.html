@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>payPage</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    
+
+    <body>
+        
+   <div style="padding: 51px" class="payment-box"> 
+      <br>
+    <h2>صفحة الدفع</h2>
+           
+    <form action="thankyou.html" method="get"> <!-- Payment form - will redirect to thankyou.html after submission -->
+      <label>:الاسم على البطاقة</label><br>      <!-- Cardholder name -->
+      <input type="text" name="cardname"  required>
+<br><br>
+      <label>:رقم البطاقة</label><br> <!-- Card number (digits only) -->
+      <input type="number" name="cardnumber" required>
+<br>  <br>
+
+      <label>:تاريخ الانتهاء على على البطاقة</label><br>   <!-- Expiry date field -->
+      <input type="date" name="expiry" required><br>
+<br>
+      <label>:رمز CVV</label><br>       <!-- CVV input -->
+      <input type="number" name="cvv" required><br>
+<br>
+    <label >:أختر طريقة الدفع</label>         <!-- Payment method selection using radio buttons -->
+  <div class="payment-options" >
+  <label><input type="radio"  id="visa" name="payment" value="VISA"> Visa</label>
+  <label><input type="radio" id="mada" name="payment" value="mada"> Mada</label>
+  <label><input type="radio" id="cod" name="payment" value="الدفع عند الاستلام" required> الدفع عند الاستلام</label>
+ </div>
+<h3>ملاحظة:الدفع عند الاستلام يوجد رسوم توصيل 15 ريال</h3>   <!-- Additional note for COD option -->
+        
+      <input type="submit" value="إتمام الدفع">      <!-- Submit button -->
+
+    </form>
+  </div>    
+    </body>
+</html>
